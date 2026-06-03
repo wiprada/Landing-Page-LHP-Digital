@@ -1,0 +1,16 @@
+{
+  "name": "landing-page-lhp-digital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

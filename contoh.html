@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHP LKPD TA 2025 - Provinsi Bali</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter untuk teks yang bersih dan elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Konfigurasi Tema Spring Green -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Tema Spring Green
+                        spring: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e', // Warna utama spring green
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slight': 'bounceSlight 2s infinite',
+                    },
+                    keyframes: {
+                        bounceSlight: {
+                            '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+                            '50%': { transform: 'none', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles untuk elemen dekoratif */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.15);
+        }
+        
+        .bg-pattern {
+            background-color: #f0fdf4;
+            background-image: radial-gradient(#86efac 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #166534 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Swiper Custom Styles */
+        .swiper {
+            padding-bottom: 3rem !important; /* Ruang untuk pagination */
+            padding-top: 1rem !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .swiper-pagination-bullet {
+            background: #86efac;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: #22c55e;
+            opacity: 1;
+            width: 24px;
+            border-radius: 999px;
+            transition: width 0.3s ease;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #16a34a !important;
+            background: white;
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dcfce7;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: #f0fdf4;
+            transform: scale(1.05);
+            transition: all 0.2s;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 1.2rem !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-pattern text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-spring-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <!-- Placeholder Icon/Logo -->
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-spring-400 to-spring-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fa-solid fa-book-open text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-spring-900 leading-tight">LHP LKPD</h1>
+                        <p class="text-xs text-spring-600 font-medium">TAHUN ANGGARAN 2025</p>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#entitas" class="text-sm font-semibold text-slate-600 hover:text-spring-600 transition-colors mr-6">Daftar Entitas</a>
+                    <a href="#akses" class="text-sm font-semibold bg-spring-100 text-spring-700 px-4 py-2 rounded-full hover:bg-spring-200 transition-colors">Akses Laporan</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-24 overflow-hidden">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-spring-200 opacity-50 blur-3xl mix-blend-multiply animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-spring-300 opacity-30 blur-3xl mix-blend-multiply"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-spring-100 text-spring-700 text-sm font-semibold mb-6 border border-spring-200 shadow-sm">
+                <i class="fa-solid fa-check-circle mr-2"></i>Rilis Publikasi Resmi
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+                Laporan Hasil Pemeriksaan<br>
+                <span class="gradient-text">Pemerintah Daerah Bali</span>
+            </h2>
+            <p class="mt-4 max-w-2xl text-lg text-slate-600 mx-auto mb-10 leading-relaxed">
+                Transparansi dan akuntabilitas pengelolaan keuangan daerah Tahun Anggaran 2025 untuk kesejahteraan masyarakat Provinsi Bali.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#entitas" class="px-8 py-4 text-base font-semibold rounded-full bg-white text-spring-700 border-2 border-spring-500 hover:bg-spring-50 hover:shadow-md transition-all duration-300 w-full sm:w-auto">
+                    Lihat Daftar Entitas <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#akses" class="px-8 py-4 text-base font-bold rounded-full bg-gradient-to-r from-spring-500 to-spring-600 text-white shadow-lg hover:shadow-spring-500/50 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
+                    Akses Portal PPID <i class="fa-solid fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entitas Section -->
+    <section id="entitas" class="py-20 bg-white border-t border-b border-spring-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">10 Entitas Pelaporan</h3>
+                <div class="w-24 h-1 bg-spring-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-500 max-w-xl mx-auto">Daftar entitas Pemerintah Daerah se-Provinsi Bali yang telah menyelesaikan Laporan Hasil Pemeriksaan atas Laporan Keuangan Tahun Anggaran 2025.</p>
+            </div>
+
+            <!-- Carousel Entitas menggunakan Swiper -->
+            <div class="swiper entitasSwiper relative -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div class="swiper-wrapper" id="carousel-wrapper">
+                    <!-- Data Entitas di-generate via JavaScript -->
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev hidden md:flex"></div>
+                <div class="swiper-button-next hidden md:flex"></div>
+            </div>
+
+            <!-- Script Generator & Inisialisasi Carousel -->
+            <script>
+                const entitasList = [
+                    { nama: "Pemerintah Provinsi Bali", icon: "fa-landmark", img: "https://images.unsplash.com/photo-1555025280-993d05632a67?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kota Denpasar", icon: "fa-city", img: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Badung", icon: "fa-map-location-dot", img: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Bangli", icon: "fa-mountain", img: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Buleleng", icon: "fa-water", img: "https://images.unsplash.com/photo-1536152470836-b943b246224c?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Gianyar", icon: "fa-palette", img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Jembrana", icon: "fa-bridge", img: "https://images.unsplash.com/photo-1590059303531-1b6fb6e029f6?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Karangasem", icon: "fa-volcano", img: "https://images.unsplash.com/photo-1570789728551-7f9b8c005b8a?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Klungkung", icon: "fa-gopuram", img: "https://images.unsplash.com/photo-1604999333679-b86d54738315?w=600&h=400&fit=crop" },
+                    { nama: "Pemerintah Kabupaten Tabanan", icon: "fa-seedling", img: "https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?w=600&h=400&fit=crop" }
+                ];
+
+                const wrapper = document.getElementById('carousel-wrapper');
+                
+                entitasList.forEach((entitas) => {
+                    wrapper.innerHTML += `
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 h-full flex flex-col group hover:shadow-xl hover:border-spring-300 transition-all duration-300 transform hover:-translate-y-2">
+                                <!-- Area Gambar -->
+                                <div class="relative h-48 overflow-hidden bg-slate-100">
+                                    <img src="${entitas.img}" alt="Kantor ${entitas.nama}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                                    <!-- Ikon Bulat -->
+                                    <div class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-spring-500 text-white flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fa-solid ${entitas.icon} text-xl"></i>
+                                    </div>
+                                </div>
+                                <!-- Area Konten -->
+                                <div class="p-6 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">${entitas.nama}</h4>
+                                        <p class="text-sm text-slate-500 mb-4">LHP LKPD Tahun Anggaran 2025</p>
+                                    </div>
+                                    <div class="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center">
+                                        <span class="inline-flex items-center gap-1.5 text-xs font-bold text-spring-700 bg-spring-50 px-3 py-1.5 rounded-full border border-spring-200">
+                                            <i class="fa-solid fa-check-circle text-spring-500"></i> Terpublikasi
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Call to Action Section (Akses PPID) -->
+    <section id="akses" class="py-24 relative flex-grow flex items-center justify-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                <!-- Background Gradient CTA -->
+                <div class="absolute inset-0 bg-gradient-to-br from-spring-800 via-spring-700 to-spring-900"></div>
+                <!-- Dekorasi dalam CTA -->
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-spring-300 opacity-20 rounded-full blur-2xl"></div>
+
+                <div class="relative z-10 p-8 md:p-12 lg:p-16 text-center">
+                    <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20">
+                        <i class="fa-solid fa-file-shield text-4xl text-spring-300"></i>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Dapatkan Dokumen LHP</h3>
+                    <p class="text-spring-100 text-lg mb-8 max-w-2xl mx-auto">
+                        Untuk membaca dan mengunduh detail Laporan Hasil Pemeriksaan, silakan kunjungi portal Pejabat Pengelola Informasi dan Dokumentasi (PPID) BPK Perwakilan Provinsi Bali.
+                    </p>
+
+                    <!-- Alert Box Info Login -->
+                    <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-4 rounded-r-lg shadow-inner max-w-2xl mx-auto mb-10 text-left flex gap-4">
+                        <div class="flex-shrink-0 pt-1">
+                            <i class="fa-solid fa-circle-info text-amber-500 text-xl animate-bounce-slight"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800">Informasi Penting</h4>
+                            <p class="text-sm mt-1">Anda diwajibkan untuk <strong>membuat akun terlebih dahulu</strong> di portal PPID agar dapat login dan mengakses atau mengunduh dokumen laporan secara penuh.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Aksi Utama yang Menarik Perhatian -->
+                    <a href="https://bali-ppid.bpk.go.id/" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-8 py-5 font-bold text-spring-900 bg-white rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform">
+                        <!-- Animasi Kilau (Shine) pada tombol -->
+                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-spring-200 rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
+                        <span class="relative flex items-center gap-3 text-lg">
+                            Menuju Portal PPID Bali 
+                            <i class="fa-solid fa-arrow-right-to-bracket group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-spring-500"></i>
+                <span class="font-semibold text-slate-300">LHP LKPD TA 2025</span>
+            </div>
+            <div class="text-sm text-center md:text-left">
+                &copy; 2026 Publikasi Informasi Laporan Keuangan Daerah.<br class="block sm:hidden"> Desain simpel & elegan.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="text-slate-400 hover:text-spring-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-slate-400 hover:text-spring-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-slate-400 hover:text-spring-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Script sederhana untuk smooth scrolling anchor links & Swiper Init -->
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize Swiper Carousel
+        const swiper = new Swiper('.entitasSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // Saat layar >= 640px (Tablet)
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                // Saat layar >= 1024px (Laptop/Desktop)
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                // Saat layar >= 1280px (Large Desktop)
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    </script>
+</body>
+</html>
