@@ -89,7 +89,7 @@ function renderEntityCards() {
   const slides = entitasList.map((entity) => {
     const imgContent = entity.img
       ? `<img src="${entity.img}" alt="Foto ${entity.name}" width="400" height="225" loading="lazy" />`
-      : `<div class="entity-card__img-placeholder"><i class="${entity.icon}"></i></div>`;
+      : `<div class="entity-card__img-placeholder" aria-hidden="true"><i class="${entity.icon}"></i></div>`;
 
     return `
       <div class="swiper-slide">
@@ -98,12 +98,12 @@ function renderEntityCards() {
             ${imgContent}
           </div>
           <div class="entity-card__body">
-            <span class="entity-card__tag">LHP LKPD TA 2025</span>
+            <span class="entity-card__tag" aria-hidden="true">LHP LKPD TA 2025</span>
             <p class="entity-card__name">${entity.name}</p>
             <p class="entity-card__type">${entity.type}</p>
             <a href="https://bali-ppid.bpk.go.id/" target="_blank" rel="noopener noreferrer"
-               class="entity-card__link">
-              Akses Laporan <i class="fa-solid fa-arrow-right text-xs"></i>
+               class="entity-card__link" aria-label="Akses laporan ${entity.name} di PPID BPK">
+              Akses Laporan <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -185,4 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
   renderEntityCards();
   initSwiper();
   initMobileMenu();
+
+  // AOS — Animate On Scroll
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      once: true,        // animasi hanya dijalankan sekali
+      offset: 60,        // mulai animasi 60px sebelum elemen terlihat
+      easing: 'ease-out-cubic',
+    });
+  }
 });

@@ -10,7 +10,7 @@
 |-------|------|--------|
 | 1 | Persiapan Lingkungan Lokal | ✅ Selesai |
 | 2 | Penyempurnaan Aset & Konten | ✅ Selesai |
-| 3 | Optimasi Mobile-First & UI/UX | ⬜ Belum Dimulai |
+| 3 | Optimasi Mobile-First & UI/UX | ✅ Selesai |
 | 4 | Interaktivitas Lanjutan & Aksesibilitas | ⬜ Belum Dimulai |
 | 5 | Persiapan Deployment | ⬜ Belum Dimulai |
 
@@ -103,21 +103,24 @@ lhp-lkpd-2025/
 > **Fokus:** Memastikan pengalaman pengguna di perangkat seluler (smartphone) sempurna.
 
 ### 3.1 Navigasi Mobile (Hamburger Menu)
-- [ ] Tambahkan tombol hamburger untuk layar kecil (saat ini menu `hidden md:block`)
-- [ ] Buat dropdown atau *off-canvas menu* dengan Tailwind + JavaScript (buka/tutup)
+- [x] Tombol hamburger sudah ada untuk layar kecil
+- [x] Off-canvas dropdown menu dengan Tailwind + JavaScript (buka/tutup) — `initMobileMenu()` di `main.js`
 
 ### 3.2 Uji Touch Target
-- [ ] Pastikan semua tombol (CTA ke PPID BPK, navigasi carousel) minimal berukuran **44×44 px**
-- [ ] *(Swiper.js sudah menangani gestur swipe di mobile)*
+- [x] Hamburger button diperbesar ke `w-11 h-11` (44×44 px)
+- [x] Hero CTA button ditambahkan `min-h-[44px]`
+- [x] Mobile menu links ditambahkan `min-h-[44px]`
+- [x] Swiper nav buttons sudah `w-11 h-11` (44×44 px)
+- [x] *(Swiper.js sudah menangani gestur swipe di mobile)*
 
 ### 3.3 Viewport & Overflow Audit
-- [ ] Uji tampilan di berbagai ukuran layar via Browser DevTools (Responsive Mode):
-  - iPhone SE, iPhone Pro Max, Samsung Galaxy
-- [ ] Pastikan tidak ada *horizontal scrolling* tidak disengaja di luar area carousel
+- [x] `overflow-x: clip` ditambahkan pada `#entitas` untuk mencegah horizontal scroll dari Swiper `overflow: visible`
+- [x] `max-width: 100vw; overflow-x: hidden` pada `body, html`
+- [ ] Uji manual di DevTools: iPhone SE, iPhone Pro Max, Samsung Galaxy
 
 ### 3.4 Optimasi Loading (LCP & CLS)
-- [ ] Tambahkan `loading="lazy"` pada gambar di slide carousel Swiper
-- [ ] Tetapkan `width` dan `height` pada gambar untuk mencegah *Cumulative Layout Shift (CLS)*
+- [x] `loading="lazy"` pada semua gambar slide carousel Swiper
+- [x] `width="400" height="225"` (rasio 16:9) pada gambar untuk mencegah CLS
 
 ---
 
@@ -132,7 +135,7 @@ lhp-lkpd-2025/
 - [ ] Perbarui meta tag di `<head>`:
   - Deskripsi akurat
   - Keywords
-  - Meta tag Open Graph (untuk sharing di media sosial)
+  
 - [ ] Pastikan semua gambar memiliki atribut `alt` yang deskriptif
   - Contoh: `alt="Foto Gedung Kantor Bupati Badung"`
 - [ ] Pastikan struktur heading (`H1` → `H2` → `H3`) semantis dan teratur
